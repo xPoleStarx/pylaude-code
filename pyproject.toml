@@ -1,0 +1,30 @@
+[project]
+name = "pylaude-code"
+version = "0.1.0"
+description = "Incremental Python port of the pylaude-code TypeScript runtime."
+requires-python = ">=3.12"
+dependencies = [
+    "anyio>=4.4,<5",
+    "prompt-toolkit>=3.0.47,<4",
+    "pydantic>=2.8,<3",
+    "rich>=13.7,<14",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3,<9",
+]
+
+[project.scripts]
+pylaude = "pylaude.cli.main:main"
+
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["pylaude*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

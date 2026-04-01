@@ -1,0 +1,21 @@
+{
+  "scenario": "permission_matrix",
+  "authority": [
+    "src/utils/permissions/permissions.ts",
+    "src/utils/permissions/permissionSetup.ts",
+    "src/utils/sandbox/sandbox-adapter.ts"
+  ],
+  "cases": [
+    {
+      "tool_name": "bash",
+      "matched_deny_rule": true,
+      "matched_allow_rule": true,
+      "expected": "deny"
+    },
+    {
+      "tool_name": "bash",
+      "matched_allow_rule": false,
+      "expected": "ask"
+    }
+  ]
+}

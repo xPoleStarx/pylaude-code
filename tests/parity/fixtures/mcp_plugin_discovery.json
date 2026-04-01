@@ -1,0 +1,14 @@
+{
+  "scenario": "mcp_plugin_discovery",
+  "authority": [
+    "src/services/mcp/config.ts",
+    "src/services/mcp/client.ts",
+    "src/utils/plugins/pluginLoader.ts",
+    "src/utils/plugins/loadPluginCommands.ts"
+  ],
+  "assertions": [
+    "dedup is deterministic",
+    "plugin settings merge before higher-priority sources",
+    "expired auth invalidates cached clients"
+  ]
+}

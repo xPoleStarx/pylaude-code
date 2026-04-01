@@ -1,0 +1,19 @@
+{
+  "scenario": "prompt_routing",
+  "authority": [
+    "src/screens/REPL.tsx",
+    "src/utils/handlePromptSubmit.ts",
+    "src/utils/processUserInput/processUserInput.ts",
+    "src/utils/processUserInput/processSlashCommand.tsx"
+  ],
+  "cases": [
+    {
+      "input": "/help",
+      "expected_branch": "slash_command"
+    },
+    {
+      "input": "explain this repo",
+      "expected_branch": "natural_prompt"
+    }
+  ]
+}

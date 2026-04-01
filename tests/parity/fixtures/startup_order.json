@@ -1,0 +1,15 @@
+{
+  "scenario": "startup_order",
+  "authority": [
+    "src/entrypoints/cli.tsx",
+    "src/main.tsx",
+    "src/setup.ts"
+  ],
+  "expected_checkpoints": [
+    "env_defaults",
+    "resolve_initial_paths",
+    "initialize_settings",
+    "register_extensions",
+    "prepare_runtime"
+  ]
+}

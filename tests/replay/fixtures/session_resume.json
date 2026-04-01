@@ -1,0 +1,12 @@
+{
+  "scenario": "session_resume",
+  "authority": [
+    "src/utils/sessionStorage.ts",
+    "src/utils/sessionRestore.ts"
+  ],
+  "assertions": [
+    "entry order preserved",
+    "session_id round-trips",
+    "format remains backward-readable"
+  ]
+}

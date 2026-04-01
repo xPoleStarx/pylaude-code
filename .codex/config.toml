@@ -1,0 +1,36 @@
+# Codex local project configuration
+
+[project]
+name = "pylaude-code"
+language = "python"
+primary_migration_source = "typescript"
+
+[migration]
+mode = "behavior-preserving"
+require_invariant_docs = true
+require_parity_matrix = true
+require_architecture_map = true
+require_cutover_plan = true
+
+[docs]
+porting_dir = "docs/porting"
+architecture_map = "docs/porting/architecture-map.md"
+invariants = "docs/porting/invariants.md"
+parity_matrix = "docs/porting/parity-matrix.md"
+python_port_plan = "docs/porting/python-port-plan.md"
+
+[quality_gates]
+block_on_unverified_assumptions = true
+block_on_undocumented_semantic_drift = true
+block_on_unreviewed_trust_boundary_changes = true
+require_trace_comparison_for_critical_flows = true
+
+[security]
+default_permission_posture = "fail-closed-when-uncertain"
+preserve_trust_boundaries = true
+allow_simplification_without_proof = false
+
+[workstyle]
+prefer_vertical_slices = true
+forbid_mass_blind_ts_to_python_conversion = true
+forbid_cleanup_that_changes_behavior = true

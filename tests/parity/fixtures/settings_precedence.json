@@ -1,0 +1,15 @@
+{
+  "scenario": "settings_precedence",
+  "authority": [
+    "src/utils/config.ts",
+    "src/utils/settings/settings.ts",
+    "src/utils/settings/settingsCache.ts"
+  ],
+  "cases": [
+    {
+      "sources": ["pluginBase", "user", "policySettings"],
+      "key": "safe",
+      "expected_source": "policySettings"
+    }
+  ]
+}
