@@ -357,4 +357,4 @@ The standard is whether the repository becomes stronger, cleaner, and more credi
 
 This project is licensed under the MIT License.
 
-See [`LICENSE`](./LICENSE) for the full text.
+See [`LICENSE`](./LICENSE) for the full text...
